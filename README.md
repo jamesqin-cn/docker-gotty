@@ -3,6 +3,12 @@ Integrate gotty with docker inside docker, then you can do everything with docke
 
 ## Usage
 
-```
-docker run --privileged -d -p8080:8080 cnjamesqin/docker-gotty
-```
+- docker inside docker mode
+  ```
+  docker run --privileged -d -p8080:8080 cnjamesqin/docker-gotty
+  ```
+  
+- docker outside of docker mode
+  ```
+  docker run --privileged -d -p8080:8080 -v /var/run/docker.sock:/var/run/docker.sock cnjamesqin/docker-gotty
+  ```
