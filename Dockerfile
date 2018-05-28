@@ -4,6 +4,7 @@ EXPOSE 8080
 
 ENV REGISTRY_MIRROR https://registry.docker-cn.com
 ENV INSECURE_REGISTRIE docker-registry.oa.com
+ENV DIND_MODE yes
 
 ADD ./etc/daemon.json /etc/docker/daemon.json
 ADD ./gotty-entrypoint.sh /usr/local/bin/gotty-entrypoint.sh
