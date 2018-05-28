@@ -1,0 +1,9 @@
+{
+	"registry-mirrors": ["https://regitry.docker-cn.com"],
+	"insecure-registries":["docker-registry.oa.com"],
+	"log-driver": "json-file",
+	"log-opts": {
+		"max-size": "20m",
+		"max-file": "5"
+	}
+}

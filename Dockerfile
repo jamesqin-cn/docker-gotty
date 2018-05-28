@@ -2,7 +2,11 @@ FROM docker:dind
 
 EXPOSE 8080
 
-ADD gotty-entrypint.sh /usr/local/bin/gotty-entrypint.sh
+ENV REGISTRY_MIRROR https://registry.docker-cn.com
+ENV INSECURE_REGISTRIE docker-registry.oa.com
+
+ADD ./etc/daemon.json /etc/docker/daemon.json
+ADD ./gotty-entrypint.sh /usr/local/bin/gotty-entrypint.sh
 
 RUN chmod +x /usr/local/bin/gotty-entrypint.sh && \
   apk add --update go git musl-dev && \
