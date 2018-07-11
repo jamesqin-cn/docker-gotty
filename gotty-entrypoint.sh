@@ -8,5 +8,5 @@ then
 	nohup /usr/local/bin/dockerd-entrypoint.sh > /dev/null 2>&1 &
 fi
 
-/usr/local/bin/gotty --permit-write --reconnect /bin/sh
+/usr/local/bin/gotty --permit-write -p 8080 /bin/sh
 
